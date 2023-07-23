@@ -1,0 +1,88 @@
+[tool.poetry]
+name = "src"
+version = "0.0.0"
+description = ""
+authors = ["Filips Nastins <nastinsfilips@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.0.2"
+structlog = "^23.1.0"
+tomodachi = "^0.25.0"
+types-aiobotocore = { extras = ["dynamodb", "sns", "sqs"], version = "^2.5.2" }
+
+[tool.poetry.group.dev.dependencies]
+autoflake = "^2.2.0"
+black = "^23.7.0"
+busypie = "^0.5.1"
+colorama = "^0.4.6"
+flake8 = "^6.0.0"
+flake8-black = "^0.3.6"
+flake8-bugbear = "^23.5.9"
+flake8-isort = "^6.0.0"
+flake8-junit-report = "^2.1.0"
+flake8-pyproject = "^1.2.3"
+flake8-pytest-style = "^1.7.2"
+httpx = "^0.24.1"
+isort = "^5.12.0"
+mypy = "^1.4.1"
+pre-commit = "^3.3.3"
+pytest = "^7.4.0"
+pytest-asyncio = "^0.21.1"
+pytest-cov = "^4.1.0"
+tomodachi-testcontainers = { path = "vendors/tomodachi_testcontainers-0.0.6.tar.gz" }
+
+[tool.poetry.scripts]
+hooks = "dev:hooks"
+format = "dev:format"
+lint = "dev:lint"
+test = "dev:test"
+test-cov-term = "dev:test_cov_term"
+test-cov-html = "dev:test_cov_html"
+test-ci = "dev:test_ci"
+
+[tool.black]
+line-length = 120
+target-version = ['py310', 'py311']
+include = '\.pyi?$'
+exclude = '\.git/|\.mypy_cache/|\.venv/|\.pytest_cache/|\.vscode/|__pycache__/|build/|dist/'
+
+[tool.isort]
+profile = "black"
+line_length = 120
+skip = [".git", ".mypy_cache", ".venv", ".pytest_cache", ".vscode", "__pycache__", "build", "dist"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+
+[tool.flake8]
+ignore = [
+    "ANN101",
+    "ANN401",
+    "BLK100",
+    "E501",
+    "LIT101",
+    "PL123",
+]
+literal-inline-quotes = "double"
+literal-multiline-quotes = "double"
+exclude = [".git", ".mypy_cache", ".venv", ".pytest_cache", ".vscode", "__pycache__", "build", "dist"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+junit_family = "xunit2"
+testpaths = [
+    "tests"
+]
+norecursedirs = [
+    ".venv",
+    "__pycache__",
+    ".git"
+]
+log_cli_level = "INFO"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

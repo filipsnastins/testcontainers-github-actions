@@ -1,0 +1,42 @@
+name: Build and test - with Dev image
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build Docker image - Dev
+        id: docker_build_dev_image
+        uses: docker/build-push-action@v4
+        with:
+          target: development
+          load: true
+
+      - name: Run commit hooks
+        run: |
+          docker run \
+          -v /var/run/docker.sock:/var/run/docker.sock \
+          "${{ steps.docker_build_dev_image.outputs.imageid }}" \
+          bash -c "git init . && SKIP=test poetry run hooks"
+
+      - name: Build Docker image - Release
+        id: docker_build_production_image
+        uses: docker/build-push-action@v4
+        with:
+          target: release
+          load: true
+
+      - name: Run tests
+        run: |
+          docker run \
+          -v /var/run/docker.sock:/var/run/docker.sock \
+          -e TOMODACHI_TESTCONTAINER_IMAGE_ID="${{ steps.docker_build_production_image.outputs.imageid }}" \
+          "${{ steps.docker_build_dev_image.outputs.imageid }}" \
+          bash -c "poetry run test-ci"
