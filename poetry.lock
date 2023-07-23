@@ -1617,12 +1617,13 @@ uvloop = ["uvloop (>=0.14.0,<1.0.0)"]
 
 [[package]]
 name = "tomodachi-testcontainers"
-version = "0.0.6"
-description = ""
+version = "0.1.0"
+description = "Collection of Testcontainers, pytest fixtures and test clients for end-to-end/integration testing for Python Tomodachi framework. A great starting point to learn more about Testcontainers and necessity of integration testing."
 optional = false
 python-versions = ">=3.8.1,<4.0.0"
 files = [
-    {file = "tomodachi_testcontainers-0.0.6.tar.gz", hash = "sha256:90fb26a5e9d6c9e8583100ad841b7b827f6df22b4001df87d59cb4a91c57fcce"},
+    {file = "tomodachi_testcontainers-0.1.0-py3-none-any.whl", hash = "sha256:609d22643a93e4467bd0ca6356e56b31ab5274740b2f25fe8f2fdbf0db799e6f"},
+    {file = "tomodachi_testcontainers-0.1.0.tar.gz", hash = "sha256:b573a67e5d84d33f4e7f62e200e0432b6e60676b592f854048f6937f8dff8d4a"},
 ]
 
 [package.dependencies]
@@ -1633,10 +1634,6 @@ types-aiobotocore = {version = ">=2.5.2,<3.0.0", extras = ["dynamodb", "s3", "sn
 
 [package.extras]
 sftp = ["asyncssh (>=2.13.2,<3.0.0)"]
-
-[package.source]
-type = "file"
-url = "vendors/tomodachi_testcontainers-0.0.6.tar.gz"
 
 [[package]]
 name = "types-aiobotocore"
@@ -2342,4 +2339,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "b850d9001bfcd9686bcdcb6b7967fdde77fd65bcb127870f228ff470b8128cd8"
+content-hash = "8a8c2e74a97433a5794701e002a180d4765ba5b9496d938d633f35426e0cc344"

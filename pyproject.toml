@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "src"
-version = "0.0.0"
-description = ""
+version = "0.1.0"
+description = "An example running Testcontainer tests in CI pipelines."
 authors = ["Filips Nastins <nastinsfilips@gmail.com>"]
 license = "MIT"
 
@@ -31,7 +31,7 @@ pre-commit = "^3.3.3"
 pytest = "^7.4.0"
 pytest-asyncio = "^0.21.1"
 pytest-cov = "^4.1.0"
-tomodachi-testcontainers = { path = "vendors/tomodachi_testcontainers-0.0.6.tar.gz" }
+tomodachi-testcontainers = "^0.1.0"
 
 [tool.poetry.scripts]
 hooks = "dev:hooks"

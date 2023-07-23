@@ -16,7 +16,6 @@ RUN python -m pip install --no-cache-dir -U \
   "poetry==$POETRY_VERSION" && \
   virtualenv "$VIRTUAL_ENV"
 COPY pyproject.toml poetry.lock ./
-COPY vendors ./vendors
 RUN poetry install --without dev
 
 FROM dependencies-base AS dependencies-release
