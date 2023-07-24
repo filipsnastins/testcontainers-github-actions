@@ -1,6 +1,9 @@
 name: Build and test - on CI server
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
+  pull_request:
 
 jobs:
   build:
