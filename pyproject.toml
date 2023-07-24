@@ -31,15 +31,13 @@ pre-commit = "^3.3.3"
 pytest = "^7.4.0"
 pytest-asyncio = "^0.21.1"
 pytest-cov = "^4.1.0"
-tomodachi-testcontainers = "^0.1.0"
+tomodachi-testcontainers = "^0.1.1"
 
 [tool.poetry.scripts]
 hooks = "dev:hooks"
 format = "dev:format"
 lint = "dev:lint"
 test = "dev:test"
-test-cov-term = "dev:test_cov_term"
-test-cov-html = "dev:test_cov_html"
 test-ci = "dev:test_ci"
 
 [tool.black]

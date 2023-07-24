@@ -36,7 +36,7 @@ repos:
         verbose: true
       - id: test
         name: Run tests
-        entry: poetry run test
+        entry: poetry run test-ci
         language: system
         always_run: true
         pass_filenames: false

@@ -1617,18 +1617,19 @@ uvloop = ["uvloop (>=0.14.0,<1.0.0)"]
 
 [[package]]
 name = "tomodachi-testcontainers"
-version = "0.1.0"
+version = "0.1.1"
 description = "Collection of Testcontainers, pytest fixtures and test clients for end-to-end/integration testing for Python Tomodachi framework. A great starting point to learn more about Testcontainers and necessity of integration testing."
 optional = false
 python-versions = ">=3.8.1,<4.0.0"
 files = [
-    {file = "tomodachi_testcontainers-0.1.0-py3-none-any.whl", hash = "sha256:609d22643a93e4467bd0ca6356e56b31ab5274740b2f25fe8f2fdbf0db799e6f"},
-    {file = "tomodachi_testcontainers-0.1.0.tar.gz", hash = "sha256:b573a67e5d84d33f4e7f62e200e0432b6e60676b592f854048f6937f8dff8d4a"},
+    {file = "tomodachi_testcontainers-0.1.1-py3-none-any.whl", hash = "sha256:f8f5b67943256cd6466c0e7e76a1e1ea35ca38ae29fa06035c2bc8cdb1c40588"},
+    {file = "tomodachi_testcontainers-0.1.1.tar.gz", hash = "sha256:4fe26c20b8bbc16aea8ce0281cf4b3864f75f344ad99b908c5bfc4e5cb9e8945"},
 ]
 
 [package.dependencies]
 aiobotocore = ">=2.5.2,<3.0.0"
 pytest = ">=7.1.2,<8.0.0"
+pytest-asyncio = ">=0.21.1,<0.22.0"
 testcontainers = ">=3.7.1,<4.0.0"
 types-aiobotocore = {version = ">=2.5.2,<3.0.0", extras = ["dynamodb", "s3", "sns", "sqs", "ssm"]}
 
@@ -2131,23 +2132,23 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
 name = "virtualenv"
-version = "20.24.1"
+version = "20.24.2"
 description = "Virtual Python Environment builder"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "virtualenv-20.24.1-py3-none-any.whl", hash = "sha256:01aacf8decd346cf9a865ae85c0cdc7f64c8caa07ff0d8b1dfc1733d10677442"},
-    {file = "virtualenv-20.24.1.tar.gz", hash = "sha256:2ef6a237c31629da6442b0bcaa3999748108c7166318d1f55cc9f8d7294e97bd"},
+    {file = "virtualenv-20.24.2-py3-none-any.whl", hash = "sha256:43a3052be36080548bdee0b42919c88072037d50d56c28bd3f853cbe92b953ff"},
+    {file = "virtualenv-20.24.2.tar.gz", hash = "sha256:fd8a78f46f6b99a67b7ec5cf73f92357891a7b3a40fd97637c27f854aae3b9e0"},
 ]
 
 [package.dependencies]
-distlib = ">=0.3.6,<1"
-filelock = ">=3.12,<4"
-platformdirs = ">=3.5.1,<4"
+distlib = ">=0.3.7,<1"
+filelock = ">=3.12.2,<4"
+platformdirs = ">=3.9.1,<4"
 
 [package.extras]
 docs = ["furo (>=2023.5.20)", "proselint (>=0.13)", "sphinx (>=7.0.1)", "sphinx-argparse (>=0.4)", "sphinxcontrib-towncrier (>=0.2.1a0)", "towncrier (>=23.6)"]
-test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess (>=1)", "flaky (>=3.7)", "packaging (>=23.1)", "pytest (>=7.3.1)", "pytest-env (>=0.8.1)", "pytest-freezer (>=0.4.6)", "pytest-mock (>=3.10)", "pytest-randomly (>=3.12)", "pytest-timeout (>=2.1)", "setuptools (>=67.8)", "time-machine (>=2.9)"]
+test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess (>=1)", "flaky (>=3.7)", "packaging (>=23.1)", "pytest (>=7.4)", "pytest-env (>=0.8.2)", "pytest-freezer (>=0.4.8)", "pytest-mock (>=3.11.1)", "pytest-randomly (>=3.12)", "pytest-timeout (>=2.1)", "setuptools (>=68)", "time-machine (>=2.10)"]
 
 [[package]]
 name = "websocket-client"
@@ -2339,4 +2340,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "8a8c2e74a97433a5794701e002a180d4765ba5b9496d938d633f35426e0cc344"
+content-hash = "f0af889204e3e4d31a0eda803d9dd902310899a9307fc3957b2927c3d93235b5"
