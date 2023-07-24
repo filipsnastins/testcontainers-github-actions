@@ -31,14 +31,6 @@ def test() -> None:
     check_call(["pytest"])
 
 
-def test_cov_term() -> None:
-    check_call(["pytest", "--cov=src", "--cov-branch", "--cov-report=term-missing"])
-
-
-def test_cov_html() -> None:
-    check_call(["pytest", "--cov=src", "--cov-branch", "--cov-report=html:build/htmlcov"])
-
-
 def test_ci() -> None:
     check_call(
         [
