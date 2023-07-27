@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "src"
-version = "0.1.1"
+version = "0.1.2"
 description = "An example running Testcontainer tests in CI pipelines."
 authors = ["Filips Nastins <nastinsfilips@gmail.com>"]
 license = "MIT"
