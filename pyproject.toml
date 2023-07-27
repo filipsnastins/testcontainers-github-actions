@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "src"
-version = "0.1.0"
+version = "0.1.1"
 description = "An example running Testcontainer tests in CI pipelines."
 authors = ["Filips Nastins <nastinsfilips@gmail.com>"]
 license = "MIT"
@@ -49,36 +49,41 @@ exclude = '\.git/|\.mypy_cache/|\.venv/|\.pytest_cache/|\.vscode/|__pycache__/|b
 [tool.isort]
 profile = "black"
 line_length = 120
-skip = [".git", ".mypy_cache", ".venv", ".pytest_cache", ".vscode", "__pycache__", "build", "dist"]
+skip = [
+    ".git",
+    ".mypy_cache",
+    ".venv",
+    ".pytest_cache",
+    ".vscode",
+    "__pycache__",
+    "build",
+    "dist",
+]
 
 [tool.mypy]
 python_version = "3.10"
 ignore_missing_imports = true
 
 [tool.flake8]
-ignore = [
-    "ANN101",
-    "ANN401",
-    "BLK100",
-    "E501",
-    "LIT101",
-    "PL123",
-]
+ignore = ["ANN101", "ANN401", "BLK100", "E501", "LIT101", "PL123"]
 literal-inline-quotes = "double"
 literal-multiline-quotes = "double"
-exclude = [".git", ".mypy_cache", ".venv", ".pytest_cache", ".vscode", "__pycache__", "build", "dist"]
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".venv",
+    ".pytest_cache",
+    ".vscode",
+    "__pycache__",
+    "build",
+    "dist",
+]
 
 [tool.pytest.ini_options]
 minversion = "7.0"
 junit_family = "xunit2"
-testpaths = [
-    "tests"
-]
-norecursedirs = [
-    ".venv",
-    "__pycache__",
-    ".git"
-]
+testpaths = ["tests"]
+norecursedirs = [".venv", "__pycache__", ".git"]
 log_cli_level = "INFO"
 
 [build-system]
