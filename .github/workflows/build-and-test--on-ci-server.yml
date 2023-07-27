@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       POETRY_VIRTUALENVS_CREATE: false
+      TESTCONTAINER_DOCKER_NETWORK: tomodachi-testcontainers
     strategy:
       max-parallel: 1
       matrix:
@@ -46,6 +47,9 @@ jobs:
 
       - name: Run commit hooks
         run: SKIP=test poetry run hooks
+
+      - name: Create Docker network for running Testcontianers
+        run: docker network ls | grep ${{ env.TESTCONTAINER_DOCKER_NETWORK }} || docker network create ${{ env.TESTCONTAINER_DOCKER_NETWORK }}
 
       - name: Run tests
         run: poetry run test-ci

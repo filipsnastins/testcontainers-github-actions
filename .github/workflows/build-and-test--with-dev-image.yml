@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      TESTCONTAINER_DOCKER_NETWORK: tomodachi-testcontainers
 
     steps:
       - uses: actions/checkout@v3
@@ -36,10 +38,14 @@ jobs:
           target: release
           load: true
 
+      - name: Create Docker network for running Testcontianers
+        run: docker network ls | grep $TESTCONTAINER_DOCKER_NETWORK || docker network create $TESTCONTAINER_DOCKER_NETWORK
+
       - name: Run tests
         run: |
           docker run \
           -v /var/run/docker.sock:/var/run/docker.sock \
+          -e TESTCONTAINER_DOCKER_NETWORK="${{ env.TESTCONTAINER_DOCKER_NETWORK }}" \
           -e TOMODACHI_TESTCONTAINER_IMAGE_ID="${{ steps.docker_build_production_image.outputs.imageid }}" \
           "${{ steps.docker_build_dev_image.outputs.imageid }}" \
           bash -c "poetry run test-ci"

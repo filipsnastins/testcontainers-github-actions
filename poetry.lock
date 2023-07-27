@@ -1617,13 +1617,13 @@ uvloop = ["uvloop (>=0.14.0,<1.0.0)"]
 
 [[package]]
 name = "tomodachi-testcontainers"
-version = "0.1.1"
+version = "0.2.1"
 description = "Collection of Testcontainers, pytest fixtures and test clients for end-to-end/integration testing for Python Tomodachi framework. A great starting point to learn more about Testcontainers and necessity of integration testing."
 optional = false
 python-versions = ">=3.8.1,<4.0.0"
 files = [
-    {file = "tomodachi_testcontainers-0.1.1-py3-none-any.whl", hash = "sha256:f8f5b67943256cd6466c0e7e76a1e1ea35ca38ae29fa06035c2bc8cdb1c40588"},
-    {file = "tomodachi_testcontainers-0.1.1.tar.gz", hash = "sha256:4fe26c20b8bbc16aea8ce0281cf4b3864f75f344ad99b908c5bfc4e5cb9e8945"},
+    {file = "tomodachi_testcontainers-0.2.1-py3-none-any.whl", hash = "sha256:7bf7c4ec2b19a4291b51568e4ed2f8f20389436a4dc410f9d6953ad38272fa8e"},
+    {file = "tomodachi_testcontainers-0.2.1.tar.gz", hash = "sha256:a9950e6f55455dcf656b2c85a8dc327571442f3f0f59a8ac6ccac7dd10cc9b19"},
 ]
 
 [package.dependencies]
@@ -2340,4 +2340,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "f0af889204e3e4d31a0eda803d9dd902310899a9307fc3957b2927c3d93235b5"
+content-hash = "9ebadf58096033a19bde035f65ac5ba01b76fb2a8ae024e94ac06c5432956b69"
