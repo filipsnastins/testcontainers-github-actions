@@ -11,6 +11,7 @@ jobs:
     env:
       POETRY_VIRTUALENVS_CREATE: false
       TESTCONTAINER_DOCKER_NETWORK: tomodachi-testcontainers
+      DOCKER_BUILDKIT: 1
     strategy:
       max-parallel: 1
       matrix:
