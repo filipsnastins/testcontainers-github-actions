@@ -31,9 +31,10 @@ RUN apt-get update && \
 RUN poetry install --with dev
 COPY . .
 RUN poetry install
+CMD ["tomodachi", "run", "src/app.py", "--loop", "uvloop"]
 
 FROM python-base AS release
 COPY --from=dependencies-release --chown=app:app /opt/venv /opt/venv
 COPY --from=dependencies-release --chown=app:app /app .
 USER app
-CMD ["tomodachi", "run", "src/app.py", "--production"]
+CMD ["tomodachi", "run", "src/app.py", "--loop", "uvloop", "--production"]
