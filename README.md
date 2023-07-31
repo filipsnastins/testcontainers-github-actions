@@ -10,6 +10,7 @@ and [testcontainers-python](https://github.com/testcontainers/testcontainers-pyt
   - [Running Testcontainer tests in CI pipeline](#running-testcontainer-tests-in-ci-pipeline)
     - [1. Run tests directly on the CI server](#1-run-tests-directly-on-the-ci-server)
     - [2. Run tests from inside a Docker container](#2-run-tests-from-inside-a-docker-container)
+  - [Resources](#resources)
   - [Development](#development)
 
 ## Running Testcontainer tests in CI pipeline
@@ -72,6 +73,10 @@ This approach example pipeline is in
     to specify the image ID of the `release` stage.
 
 ![Run tests from inside a Docker container](docs/diagrams/testcontainers-ci-docker-from-docker.drawio.png)
+
+## Resources
+
+- [Testcontainers: Patterns for running tests inside a Docker container](https://java.testcontainers.org/supported_docker_environment/continuous_integration/dind_patterns/)
 
 ## Development
 
