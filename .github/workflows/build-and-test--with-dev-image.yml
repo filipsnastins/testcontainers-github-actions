@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TESTCONTAINER_DOCKER_NETWORK: tomodachi-testcontainers
-      DOCKER_BUILDKIT: 1
 
     steps:
       - uses: actions/checkout@v3
