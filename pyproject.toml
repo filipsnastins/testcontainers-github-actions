@@ -32,7 +32,12 @@ pre-commit = "^3.3.3"
 pytest = "^7.4.0"
 pytest-asyncio = "^0.21.1"
 pytest-cov = "^4.1.0"
-tomodachi-testcontainers = "^0.2.2"
+pytest-env = "^0.8.2"
+tomodachi-testcontainers = "^0.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 hooks = "dev:hooks"
@@ -86,7 +91,11 @@ junit_family = "xunit2"
 testpaths = ["tests"]
 norecursedirs = [".venv", "__pycache__", ".git"]
 log_cli_level = "INFO"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+env = [
+    # Set dummy AWS credentials so that we don't accidentally mutate real infrastructure
+    "AWS_ACCESS_KEY_ID=testing",
+    "AWS_DEFAULT_REGION=us-east-1",
+    "AWS_SECRET_ACCESS_KEY=testing",
+    "AWS_SECURITY_TOKEN=testing",
+    "AWS_SESSION_TOKEN=testing",
+]

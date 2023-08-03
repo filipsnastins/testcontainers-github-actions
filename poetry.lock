@@ -321,13 +321,13 @@ crt = ["awscrt (==0.16.9)"]
 
 [[package]]
 name = "botocore-stubs"
-version = "1.31.9"
+version = "1.31.18"
 description = "Type annotations and code completion for botocore"
 optional = false
 python-versions = ">=3.7,<4.0"
 files = [
-    {file = "botocore_stubs-1.31.9-py3-none-any.whl", hash = "sha256:e3e89d7b858f4a7674a1846cece464e92fa9bf4f2ba9ac7886c7db2614d8eb68"},
-    {file = "botocore_stubs-1.31.9.tar.gz", hash = "sha256:fa9532d76937dfc986778e94daca7b59971562166cb3740880a9396ea30bbbd7"},
+    {file = "botocore_stubs-1.31.18-py3-none-any.whl", hash = "sha256:45d46de914ebdcc6020ac37af2a55e9a4792b19b4a2b9d37de2b147fcd30bfb5"},
+    {file = "botocore_stubs-1.31.18.tar.gz", hash = "sha256:77db6ffae6b7bf587a38bd8a3fb070dbae884325d4d81405e32a656e1d17da1f"},
 ]
 
 [package.dependencies]
@@ -1110,29 +1110,29 @@ testing = ["coverage", "flake8", "flake8-comprehensions", "flake8-deprecated", "
 
 [[package]]
 name = "pathspec"
-version = "0.11.1"
+version = "0.11.2"
 description = "Utility library for gitignore style pattern matching of file paths."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pathspec-0.11.1-py3-none-any.whl", hash = "sha256:d8af70af76652554bd134c22b3e8a1cc46ed7d91edcdd721ef1a0c51a84a5293"},
-    {file = "pathspec-0.11.1.tar.gz", hash = "sha256:2798de800fa92780e33acca925945e9a19a133b715067cf165b8866c15a31687"},
+    {file = "pathspec-0.11.2-py3-none-any.whl", hash = "sha256:1d6ed233af05e679efb96b1851550ea95bbb64b7c490b0f5aa52996c11e92a20"},
+    {file = "pathspec-0.11.2.tar.gz", hash = "sha256:e0d8d0ac2f12da61956eb2306b69f9469b42f4deb0f3cb6ed47b9cce9996ced3"},
 ]
 
 [[package]]
 name = "platformdirs"
-version = "3.9.1"
+version = "3.10.0"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "platformdirs-3.9.1-py3-none-any.whl", hash = "sha256:ad8291ae0ae5072f66c16945166cb11c63394c7a3ad1b1bc9828ca3162da8c2f"},
-    {file = "platformdirs-3.9.1.tar.gz", hash = "sha256:1b42b450ad933e981d56e59f1b97495428c9bd60698baab9f3eb3d00d5822421"},
+    {file = "platformdirs-3.10.0-py3-none-any.whl", hash = "sha256:d7c24979f292f916dc9cbf8648319032f551ea8c49a4c9bf2fb556a02070ec1d"},
+    {file = "platformdirs-3.10.0.tar.gz", hash = "sha256:b45696dab2d7cc691a3226759c0d3b00c47c8b6e293d96f6436f733303f77f6d"},
 ]
 
 [package.extras]
-docs = ["furo (>=2023.5.20)", "proselint (>=0.13)", "sphinx (>=7.0.1)", "sphinx-autodoc-typehints (>=1.23,!=1.23.4)"]
-test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=7.3.1)", "pytest-cov (>=4.1)", "pytest-mock (>=3.10)"]
+docs = ["furo (>=2023.7.26)", "proselint (>=0.13)", "sphinx (>=7.1.1)", "sphinx-autodoc-typehints (>=1.24)"]
+test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=7.4)", "pytest-cov (>=4.1)", "pytest-mock (>=3.11.1)"]
 
 [[package]]
 name = "pluggy"
@@ -1378,6 +1378,23 @@ pytest = ">=4.6"
 testing = ["fields", "hunter", "process-tests", "pytest-xdist", "six", "virtualenv"]
 
 [[package]]
+name = "pytest-env"
+version = "0.8.2"
+description = "py.test plugin that allows you to add environment variables."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "pytest_env-0.8.2-py3-none-any.whl", hash = "sha256:5e533273f4d9e6a41c3a3120e0c7944aae5674fa773b329f00a5eb1f23c53a38"},
+    {file = "pytest_env-0.8.2.tar.gz", hash = "sha256:baed9b3b6bae77bd75b9238e0ed1ee6903a42806ae9d6aeffb8754cd5584d4ff"},
+]
+
+[package.dependencies]
+pytest = ">=7.3.1"
+
+[package.extras]
+test = ["coverage (>=7.2.7)", "pytest-mock (>=3.10)"]
+
+[[package]]
 name = "python-dateutil"
 version = "2.8.2"
 description = "Extensions to the standard Python datetime module"
@@ -1551,6 +1568,20 @@ tests = ["coverage[toml]", "freezegun (>=0.2.8)", "pretend", "pytest (>=6.0)", "
 typing = ["mypy", "rich", "twisted"]
 
 [[package]]
+name = "tenacity"
+version = "8.2.2"
+description = "Retry code until it succeeds"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "tenacity-8.2.2-py3-none-any.whl", hash = "sha256:2f277afb21b851637e8f52e6a613ff08734c347dc19ade928e519d7d2d8569b0"},
+    {file = "tenacity-8.2.2.tar.gz", hash = "sha256:43af037822bd0029025877f3b2d97cc4d7bb0c2991000a3d59d71517c5c969e0"},
+]
+
+[package.extras]
+doc = ["reno", "sphinx", "tornado (>=4.5)"]
+
+[[package]]
 name = "testcontainers"
 version = "3.7.1"
 description = "Library provides lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container"
@@ -1617,19 +1648,20 @@ uvloop = ["uvloop (>=0.14.0,<1.0.0)"]
 
 [[package]]
 name = "tomodachi-testcontainers"
-version = "0.2.2"
+version = "0.3.0"
 description = "Collection of Testcontainers, pytest fixtures and test clients for end-to-end/integration testing for Python Tomodachi framework. A great starting point to learn more about Testcontainers and necessity of integration testing."
 optional = false
 python-versions = ">=3.8.1,<4.0.0"
 files = [
-    {file = "tomodachi_testcontainers-0.2.2-py3-none-any.whl", hash = "sha256:7f71030976f3f2056cdacc7fca5d2cde98f6732ea5d8f9fceb26b763e84976a2"},
-    {file = "tomodachi_testcontainers-0.2.2.tar.gz", hash = "sha256:87462272780e013e88f3d7c3bafc1227741e099c4a80f73e66c00acd1ec4a0f7"},
+    {file = "tomodachi_testcontainers-0.3.0-py3-none-any.whl", hash = "sha256:1ee1f8a91e861f2dc6e11ea1285c47a3e740b3ade01741bc871ab9ef826b35c8"},
+    {file = "tomodachi_testcontainers-0.3.0.tar.gz", hash = "sha256:7df4bda7337224500eb9c564ed3e531c42c43c5ef04cf2941d2e9591533e6b70"},
 ]
 
 [package.dependencies]
 aiobotocore = ">=2.5.2,<3.0.0"
 pytest = ">=7.1.2,<8.0.0"
 pytest-asyncio = ">=0.21.1,<0.22.0"
+tenacity = ">=8.2.2,<9.0.0"
 testcontainers = ">=3.7.1,<4.0.0"
 types-aiobotocore = {version = ">=2.5.2,<3.0.0", extras = ["dynamodb", "s3", "sns", "sqs", "ssm"]}
 
@@ -2011,68 +2043,68 @@ xray = ["types-aiobotocore-xray (>=2.5.0,<2.6.0)"]
 
 [[package]]
 name = "types-aiobotocore-dynamodb"
-version = "2.5.2.post2"
-description = "Type annotations for aiobotocore.DynamoDB 2.5.2 service generated with mypy-boto3-builder 7.15.0"
+version = "2.5.2.post3"
+description = "Type annotations for aiobotocore.DynamoDB 2.5.2 service generated with mypy-boto3-builder 7.17.1"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "types-aiobotocore-dynamodb-2.5.2.post2.tar.gz", hash = "sha256:f312b36a4393983900e03d2b3d1e48d99c3fcf47ef81dd3207ccad143b0968b7"},
-    {file = "types_aiobotocore_dynamodb-2.5.2.post2-py3-none-any.whl", hash = "sha256:23b49b374d9eca1769ab24ac5f02d4f67a8d1247059d69aa7e98f809ce930777"},
+    {file = "types-aiobotocore-dynamodb-2.5.2.post3.tar.gz", hash = "sha256:53fd91e0c0d657ec7c7a078afe8bb208f8c9f78bfdbe0a60b761e125e6398a8e"},
+    {file = "types_aiobotocore_dynamodb-2.5.2.post3-py3-none-any.whl", hash = "sha256:f4a77552b54db1492afea0db930095f3c3eef944d07300747b402f31f3af03db"},
 ]
 
 [[package]]
 name = "types-aiobotocore-s3"
-version = "2.5.2"
-description = "Type annotations for aiobotocore.S3 2.5.2 service generated with mypy-boto3-builder 7.14.5"
+version = "2.5.2.post1"
+description = "Type annotations for aiobotocore.S3 2.5.2 service generated with mypy-boto3-builder 7.17.1"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "types-aiobotocore-s3-2.5.2.tar.gz", hash = "sha256:5005dc7c8513a2ba778752d347a85d9b9d14545d85b30c8c71abe983243321a9"},
-    {file = "types_aiobotocore_s3-2.5.2-py3-none-any.whl", hash = "sha256:a84ebeebf52575780e78d9a6ba71d86858c06c81b9d0927c3a2435c697e19e8c"},
+    {file = "types-aiobotocore-s3-2.5.2.post1.tar.gz", hash = "sha256:5d5d22c831db49c9480d6a2138dbd883e477f942be116bb0f5b42c3bae58b516"},
+    {file = "types_aiobotocore_s3-2.5.2.post1-py3-none-any.whl", hash = "sha256:c0050f348221fa9d92f9514849c416ff1ba483087413c02da22c698b9fe9b3fe"},
 ]
 
 [[package]]
 name = "types-aiobotocore-sns"
-version = "2.5.2"
-description = "Type annotations for aiobotocore.SNS 2.5.2 service generated with mypy-boto3-builder 7.14.5"
+version = "2.5.2.post1"
+description = "Type annotations for aiobotocore.SNS 2.5.2 service generated with mypy-boto3-builder 7.17.1"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "types-aiobotocore-sns-2.5.2.tar.gz", hash = "sha256:118002dda891af0dd69f389d63edee4233a7a28e717b43bf8c16ee130fd014ee"},
-    {file = "types_aiobotocore_sns-2.5.2-py3-none-any.whl", hash = "sha256:29f5639c795b0feda3e8712d497c7bdd2c77cbcd978af207639038440d135a0a"},
+    {file = "types-aiobotocore-sns-2.5.2.post1.tar.gz", hash = "sha256:256558e899c111e366f2ba2f93e685f73d92414f9c867442d638245b6d47bcf2"},
+    {file = "types_aiobotocore_sns-2.5.2.post1-py3-none-any.whl", hash = "sha256:61d161b6a420a0ad4eb3df333c1cfee17d55e770909f8fba4bab5df2231b9dca"},
 ]
 
 [[package]]
 name = "types-aiobotocore-sqs"
-version = "2.5.2"
-description = "Type annotations for aiobotocore.SQS 2.5.2 service generated with mypy-boto3-builder 7.14.5"
+version = "2.5.2.post1"
+description = "Type annotations for aiobotocore.SQS 2.5.2 service generated with mypy-boto3-builder 7.17.1"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "types-aiobotocore-sqs-2.5.2.tar.gz", hash = "sha256:b48ddc905307782de60e95883df31d47fe032b221793b180fa19f67954123ffc"},
-    {file = "types_aiobotocore_sqs-2.5.2-py3-none-any.whl", hash = "sha256:11b7cee150393ba33ddd9fcb0c90c94b7818e3469d1e3e5b0361eefc51310343"},
+    {file = "types-aiobotocore-sqs-2.5.2.post1.tar.gz", hash = "sha256:7355497a895ae59835b1cc3483d806949ef5fa022f3a5d4eb86c9d915270b9d8"},
+    {file = "types_aiobotocore_sqs-2.5.2.post1-py3-none-any.whl", hash = "sha256:b2f028133c03f94d480c4c72f73b6a1ed09e5cd4b633ef0d0d0e5625a1e3be0f"},
 ]
 
 [[package]]
 name = "types-aiobotocore-ssm"
-version = "2.5.2"
-description = "Type annotations for aiobotocore.SSM 2.5.2 service generated with mypy-boto3-builder 7.14.5"
+version = "2.5.2.post1"
+description = "Type annotations for aiobotocore.SSM 2.5.2 service generated with mypy-boto3-builder 7.17.1"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "types-aiobotocore-ssm-2.5.2.tar.gz", hash = "sha256:db7a77241c9c76fc53523c665a621360f42ed21791acc0cbad90f792c918ab70"},
-    {file = "types_aiobotocore_ssm-2.5.2-py3-none-any.whl", hash = "sha256:2ce3d45178463e9b333dd7f562bcd9be557bd8778711d9fc1dc6412aa615e47b"},
+    {file = "types-aiobotocore-ssm-2.5.2.post1.tar.gz", hash = "sha256:1888ffc79b2b24fa4616969b522332999167da8602accd55b6eb64006df082f5"},
+    {file = "types_aiobotocore_ssm-2.5.2.post1-py3-none-any.whl", hash = "sha256:726518f493778df0c6e0d4bf42e7a144327999516cbddfa43a0a9bd2131bf76b"},
 ]
 
 [[package]]
 name = "types-awscrt"
-version = "0.16.26"
+version = "0.17.0"
 description = "Type annotations and code completion for awscrt"
 optional = false
 python-versions = ">=3.7,<4.0"
 files = [
-    {file = "types_awscrt-0.16.26-py3-none-any.whl", hash = "sha256:47bcfd741465196e000e5a29ea98516765d2e93803d3fb67f9d6be79a632ee98"},
-    {file = "types_awscrt-0.16.26.tar.gz", hash = "sha256:011b0efc054cddb542416f4a38452a3cab3f2d6cef7af0cd124c03a89634f101"},
+    {file = "types_awscrt-0.17.0-py3-none-any.whl", hash = "sha256:278c1a913098e226769cd28dc37643a2f360907353a7e8918e1bcdf93d4e34f2"},
+    {file = "types_awscrt-0.17.0.tar.gz", hash = "sha256:4214783a747af900a5f98ec020d52ecae5910b470fd636813637a45b82a97516"},
 ]
 
 [[package]]
@@ -2384,4 +2416,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "25febee9dbeb9835f01ce0f901f3c4cab85f6a642cda9d99725fa0e23e690c7f"
+content-hash = "3b799155e8fd6580e5e401ef408e52eecafb9fbb88785889dab1a2c6e4354866"

@@ -26,7 +26,7 @@ def service_orders_container(
     tomodachi_image: DockerImage,
     moto_container: MotoContainer,
     _create_topics_and_queues: None,
-    _reset_moto_container: None,
+    _reset_moto_container_on_teardown: None,
 ) -> Generator[TomodachiContainer, None, None]:
     with (
         TomodachiContainer(image=str(tomodachi_image.id), edge_port=get_available_port())
