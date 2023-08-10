@@ -33,7 +33,7 @@ pytest = "^7.4.0"
 pytest-asyncio = "^0.21.1"
 pytest-cov = "^4.1.0"
 pytest-env = "^0.8.2"
-tomodachi-testcontainers = "^0.3.0"
+tomodachi-testcontainers = "^0.4.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -86,11 +86,7 @@ exclude = [
 ]
 
 [tool.pytest.ini_options]
-minversion = "7.0"
-junit_family = "xunit2"
-testpaths = ["tests"]
-norecursedirs = [".venv", "__pycache__", ".git"]
-log_cli_level = "INFO"
+log_level = "INFO"
 env = [
     # Set dummy AWS credentials so that we don't accidentally mutate real infrastructure
     "AWS_ACCESS_KEY_ID=testing",

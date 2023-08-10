@@ -1648,13 +1648,13 @@ uvloop = ["uvloop (>=0.14.0,<1.0.0)"]
 
 [[package]]
 name = "tomodachi-testcontainers"
-version = "0.3.0"
+version = "0.4.0"
 description = "Collection of Testcontainers, pytest fixtures and test clients for end-to-end/integration testing for Python Tomodachi framework. A great starting point to learn more about Testcontainers and necessity of integration testing."
 optional = false
 python-versions = ">=3.8.1,<4.0.0"
 files = [
-    {file = "tomodachi_testcontainers-0.3.0-py3-none-any.whl", hash = "sha256:1ee1f8a91e861f2dc6e11ea1285c47a3e740b3ade01741bc871ab9ef826b35c8"},
-    {file = "tomodachi_testcontainers-0.3.0.tar.gz", hash = "sha256:7df4bda7337224500eb9c564ed3e531c42c43c5ef04cf2941d2e9591533e6b70"},
+    {file = "tomodachi_testcontainers-0.4.0-py3-none-any.whl", hash = "sha256:0c62e8ec70b7fde7dbd2c2ee5a7a12b851c0559961d6d3ccc241ed2bad332cec"},
+    {file = "tomodachi_testcontainers-0.4.0.tar.gz", hash = "sha256:50624ddf1b70a646ebd2a7c22dc883ff99761e4cadeade6ce13b38ab4cd5bbd8"},
 ]
 
 [package.dependencies]
@@ -1663,7 +1663,7 @@ pytest = ">=7.1.2,<8.0.0"
 pytest-asyncio = ">=0.21.1,<0.22.0"
 tenacity = ">=8.2.2,<9.0.0"
 testcontainers = ">=3.7.1,<4.0.0"
-types-aiobotocore = {version = ">=2.5.2,<3.0.0", extras = ["dynamodb", "s3", "sns", "sqs", "ssm"]}
+types-aiobotocore = {version = ">=2.5.2,<3.0.0", extras = ["dynamodb", "iam", "lambda", "s3", "sns", "sqs", "ssm"]}
 
 [package.extras]
 sftp = ["asyncssh (>=2.13.2,<3.0.0)"]
@@ -1682,6 +1682,8 @@ files = [
 [package.dependencies]
 botocore-stubs = "*"
 types-aiobotocore-dynamodb = {version = ">=2.5.0,<2.6.0", optional = true, markers = "extra == \"dynamodb\""}
+types-aiobotocore-iam = {version = ">=2.5.0,<2.6.0", optional = true, markers = "extra == \"iam\""}
+types-aiobotocore-lambda = {version = ">=2.5.0,<2.6.0", optional = true, markers = "extra == \"lambda\""}
 types-aiobotocore-s3 = {version = ">=2.5.0,<2.6.0", optional = true, markers = "extra == \"s3\""}
 types-aiobotocore-sns = {version = ">=2.5.0,<2.6.0", optional = true, markers = "extra == \"sns\""}
 types-aiobotocore-sqs = {version = ">=2.5.0,<2.6.0", optional = true, markers = "extra == \"sqs\""}
@@ -2053,6 +2055,28 @@ files = [
 ]
 
 [[package]]
+name = "types-aiobotocore-iam"
+version = "2.5.4"
+description = "Type annotations for aiobotocore.IAM 2.5.4 service generated with mypy-boto3-builder 7.17.2"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "types-aiobotocore-iam-2.5.4.tar.gz", hash = "sha256:1145209e4fecaf5dd7578f09409c182f61e47ab3d22802f6263bd64315a35137"},
+    {file = "types_aiobotocore_iam-2.5.4-py3-none-any.whl", hash = "sha256:04098934570201c5ad24714ca6e69ee039d85657d416bf5918e01ab17314d214"},
+]
+
+[[package]]
+name = "types-aiobotocore-lambda"
+version = "2.5.4"
+description = "Type annotations for aiobotocore.Lambda 2.5.4 service generated with mypy-boto3-builder 7.17.2"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "types-aiobotocore-lambda-2.5.4.tar.gz", hash = "sha256:e114222b92626102eec8714b1eb2738f9db8f6b88d7eac10f9f43784be69cd37"},
+    {file = "types_aiobotocore_lambda-2.5.4-py3-none-any.whl", hash = "sha256:6d07efd96b17c50574ead4e83479873906eb93559dab85f14b8b357d02f629c7"},
+]
+
+[[package]]
 name = "types-aiobotocore-s3"
 version = "2.5.2.post1"
 description = "Type annotations for aiobotocore.S3 2.5.2 service generated with mypy-boto3-builder 7.17.1"
@@ -2416,4 +2440,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "3b799155e8fd6580e5e401ef408e52eecafb9fbb88785889dab1a2c6e4354866"
+content-hash = "59d4892a018ee8951b37a1a11d0d454e13b4c16bed225defb10d742dc0ae3239"
