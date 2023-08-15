@@ -1616,13 +1616,13 @@ selenium = ["selenium"]
 
 [[package]]
 name = "tomodachi"
-version = "0.25.0"
+version = "0.25.1"
 description = "Microservice library on asyncio - HTTP server, websockets, pub/sub messaging for AWS SNS+SQS and RabbitMQ"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "tomodachi-0.25.0-py3-none-any.whl", hash = "sha256:285f4b4fcab418ce30b7a6bc05a65966443aa66956f014eec5b7d9d61151d6f5"},
-    {file = "tomodachi-0.25.0.tar.gz", hash = "sha256:2abb68677a2ce9d86180704beda0195335d2c5973d8681b007fbf94b67637671"},
+    {file = "tomodachi-0.25.1-py3-none-any.whl", hash = "sha256:2014c37338c5968e052db6c27c7c7ef481daa9ddd8faea6a340d5f3dd0821192"},
+    {file = "tomodachi-0.25.1.tar.gz", hash = "sha256:52e7a0aaf1297d546ed062afbb4743be33cac2a4e423a806cb6fc6f7e07f856a"},
 ]
 
 [package.dependencies]
@@ -2440,4 +2440,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "34d9b42fb1cf1aa77acf68a0973400c2d8a329f26a2622c82ebb0d82e21e5a04"
+content-hash = "d1b66afec2e03b3af2ae1d53b67912fed6705b70cd4388d7448a6bd515268479"
