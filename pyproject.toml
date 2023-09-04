@@ -14,7 +14,7 @@ types-aiobotocore = { extras = ["dynamodb", "sns", "sqs"], version = "^2.5.2" }
 uvloop = "^0.17.0"
 
 [tool.poetry.group.dev.dependencies]
-autoflake = "^2.2.0"
+autoflake = "^2.2.1"
 black = "^23.7.0"
 busypie = "^0.5.1"
 colorama = "^0.4.6"
