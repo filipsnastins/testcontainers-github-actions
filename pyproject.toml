@@ -16,7 +16,6 @@ uvloop = "^0.17.0"
 [tool.poetry.group.dev.dependencies]
 autoflake = "^2.2.0"
 black = "^23.7.0"
-busypie = "^0.5.1"
 colorama = "^0.4.6"
 flake8 = "^6.1.0"
 flake8-black = "^0.3.6"

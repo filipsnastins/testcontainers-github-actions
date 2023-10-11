@@ -4,11 +4,10 @@ from typing import Any
 
 import httpx
 import pytest
-from busypie import wait_at_most
 from tomodachi.envelope.json_base import JsonBase
-from tomodachi_testcontainers.clients import snssqs_client
+from tomodachi_testcontainers.clients import SNSSQSTestClient
 from tomodachi_testcontainers.pytest.assertions import UUID4_PATTERN, assert_datetime_within_range
-from types_aiobotocore_sqs import SQSClient
+from tomodachi_testcontainers.pytest.async_probes import probe_until
 
 
 @pytest.mark.asyncio()
@@ -25,7 +24,7 @@ async def test_order_not_found(http_client: httpx.AsyncClient) -> None:
 
 
 @pytest.mark.asyncio()
-async def test_create_order(http_client: httpx.AsyncClient, moto_sqs_client: SQSClient) -> None:
+async def test_create_order(http_client: httpx.AsyncClient, moto_snssqs_tc: SNSSQSTestClient) -> None:
     customer_id = "4752ce1f-d2a8-4bf1-88e7-ca05b9b3d756"
     products: list[str] = ["MINIMALIST-SPOON", "RETRO-LAMPSHADE"]
 
@@ -58,16 +57,16 @@ async def test_create_order(http_client: httpx.AsyncClient, moto_sqs_client: SQS
         },
     }
 
-    async def _order_created_event_emitted() -> None:
-        [event] = await snssqs_client.receive(moto_sqs_client, "order--created", JsonBase, dict[str, Any])
+    async def _order_created_event_emitted() -> dict[str, Any]:
+        [event] = await moto_snssqs_tc.receive("order--created", JsonBase, dict[str, Any])
+        return event
 
-        assert_datetime_within_range(datetime.fromisoformat(event["created_at"]))
-        assert event == {
-            "event_id": event["event_id"],
-            "order_id": order_id,
-            "customer_id": customer_id,
-            "products": products,
-            "created_at": event["created_at"],
-        }
-
-    await wait_at_most(5).until_asserted_async(_order_created_event_emitted)
+    event = await probe_until(_order_created_event_emitted)
+    assert_datetime_within_range(datetime.fromisoformat(event["created_at"]))
+    assert event == {
+        "event_id": event["event_id"],
+        "order_id": order_id,
+        "customer_id": customer_id,
+        "products": products,
+        "created_at": event["created_at"],
+    }

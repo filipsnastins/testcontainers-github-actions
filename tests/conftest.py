@@ -4,25 +4,21 @@ import httpx
 import pytest
 import pytest_asyncio
 from docker.models.images import Image as DockerImage
-from tomodachi_testcontainers.clients import snssqs_client
-from tomodachi_testcontainers.containers import MotoContainer, TomodachiContainer
+from tomodachi_testcontainers import MotoContainer, TomodachiContainer
+from tomodachi_testcontainers.clients import SNSSQSTestClient
 from tomodachi_testcontainers.utils import get_available_port
-from types_aiobotocore_sns import SNSClient
-from types_aiobotocore_sqs import SQSClient
 
 
 @pytest_asyncio.fixture()
-async def _create_topics_and_queues(moto_sns_client: SNSClient, moto_sqs_client: SQSClient) -> None:
-    await snssqs_client.subscribe_to(
-        moto_sns_client,
-        moto_sqs_client,
+async def _create_topics_and_queues(moto_snssqs_tc: SNSSQSTestClient) -> None:
+    await moto_snssqs_tc.subscribe_to(
         topic="order--created",
         queue="order--created",
     )
 
 
 @pytest.fixture()
-def service_orders_container(
+def tomodachi_container(
     tomodachi_image: DockerImage,
     moto_container: MotoContainer,
     _create_topics_and_queues: None,
@@ -42,6 +38,6 @@ def service_orders_container(
 
 
 @pytest_asyncio.fixture()
-async def http_client(service_orders_container: TomodachiContainer) -> AsyncGenerator[httpx.AsyncClient, None]:
-    async with httpx.AsyncClient(base_url=service_orders_container.get_external_url()) as client:
+async def http_client(tomodachi_container: TomodachiContainer) -> AsyncGenerator[httpx.AsyncClient, None]:
+    async with httpx.AsyncClient(base_url=tomodachi_container.get_external_url()) as client:
         yield client

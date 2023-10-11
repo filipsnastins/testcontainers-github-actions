@@ -334,17 +334,6 @@ files = [
 types-awscrt = "*"
 
 [[package]]
-name = "busypie"
-version = "0.5.1"
-description = "Easy and expressive busy-waiting for Python"
-optional = false
-python-versions = ">=3.6"
-files = [
-    {file = "busypie-0.5.1-py3-none-any.whl", hash = "sha256:0f7d6a3e549357a8d59087985919af11276cd11a6be162dadd7f8d60a4718a86"},
-    {file = "busypie-0.5.1.tar.gz", hash = "sha256:5a6ec2a60973a9708a2b6aada5d9904ab73636f2432f19db2940c811af559d02"},
-]
-
-[[package]]
 name = "certifi"
 version = "2023.7.22"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -2457,4 +2446,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "93e0afa3c3a76ff135a24962040821dc0250c034ac1bae6c8311efd2fec1767c"
+content-hash = "966437293b27c4d0ac1807cb6ddf9a28c5a7ebd6f48322b552371575166e64ab"
