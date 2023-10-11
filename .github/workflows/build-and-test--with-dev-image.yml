@@ -39,7 +39,7 @@ jobs:
           load: true
 
       - name: Create Docker network for running Testcontianers
-        run: docker network ls | grep $TESTCONTAINER_DOCKER_NETWORK || docker network create $TESTCONTAINER_DOCKER_NETWORK
+        run: docker network create ${{ env.TESTCONTAINER_DOCKER_NETWORK }}
 
       - name: Run tests
         run: |

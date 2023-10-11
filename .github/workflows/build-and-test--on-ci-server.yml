@@ -50,7 +50,7 @@ jobs:
         run: SKIP=test poetry run hooks
 
       - name: Create Docker network for running Testcontianers
-        run: docker network ls | grep ${{ env.TESTCONTAINER_DOCKER_NETWORK }} || docker network create ${{ env.TESTCONTAINER_DOCKER_NETWORK }}
+        run: docker network create ${{ env.TESTCONTAINER_DOCKER_NETWORK }}
 
       - name: Run tests
         run: poetry run test-ci
