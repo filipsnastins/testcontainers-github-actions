@@ -11,7 +11,7 @@ pydantic = "^2.1.1"
 structlog = "^23.1.0"
 tomodachi = "^0.25.0"
 types-aiobotocore = { extras = ["dynamodb", "sns", "sqs"], version = "^2.5.2" }
-uvloop = "^0.17.0"
+uvloop = "^0.18.0"
 
 [tool.poetry.group.dev.dependencies]
 autoflake = "^2.2.0"
