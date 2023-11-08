@@ -1550,6 +1550,17 @@ testing = ["build[virtualenv]", "filelock (>=3.4.0)", "flake8-2020", "ini2toml[l
 testing-integration = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "packaging (>=23.1)", "pytest", "pytest-enabler", "pytest-xdist", "tomli", "virtualenv (>=13.0.0)", "wheel"]
 
 [[package]]
+name = "shortuuid"
+version = "1.0.11"
+description = "A generator library for concise, unambiguous and URL-safe UUIDs."
+optional = false
+python-versions = ">=3.5"
+files = [
+    {file = "shortuuid-1.0.11-py3-none-any.whl", hash = "sha256:27ea8f28b1bd0bf8f15057a3ece57275d2059d2b0bb02854f02189962c13b6aa"},
+    {file = "shortuuid-1.0.11.tar.gz", hash = "sha256:fc75f2615914815a8e4cb1501b3a513745cb66ef0fd5fc6fb9f8c3fa3481f789"},
+]
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -1669,13 +1680,13 @@ uvloop = ["uvloop (>=0.14.0,<1.0.0)"]
 
 [[package]]
 name = "tomodachi-testcontainers"
-version = "0.10.1"
+version = "0.10.2"
 description = "Collection of Testcontainers, pytest fixtures and test clients for end-to-end/integration testing for Python Tomodachi framework. A great starting point to learn more about Testcontainers and necessity of integration testing."
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "tomodachi_testcontainers-0.10.1-py3-none-any.whl", hash = "sha256:e1223e0e001d44da6d1a3604d9e7a0c807a3b49a0edabab09ea0d959f3d7c128"},
-    {file = "tomodachi_testcontainers-0.10.1.tar.gz", hash = "sha256:ba1ed383be184ba8e36dd334c802aa10a6175d4b00b9d159441450ba7b24bc9a"},
+    {file = "tomodachi_testcontainers-0.10.2-py3-none-any.whl", hash = "sha256:2606789b5bea54a79d6345a8eaf6b422d806ff80cf7a6d9a9af620d8c81dab4d"},
+    {file = "tomodachi_testcontainers-0.10.2.tar.gz", hash = "sha256:b5128e59334be6a4db94539cc17ac30268cbeae2b4ffd6c2a42350d040866c7b"},
 ]
 
 [package.dependencies]
@@ -1684,6 +1695,7 @@ protobuf = ">=4.0,<5.0"
 pytest = ">=7.1.2,<8.0.0"
 pytest-asyncio = ">=0.21.1,<0.22.0"
 requests = ">=2.31.0,<3.0.0"
+shortuuid = ">=1.0.11,<2.0.0"
 tenacity = ">=8.2.2,<9.0.0"
 testcontainers = ">=3.7.1,<4.0.0"
 types-aiobotocore = {version = ">=2.4.2,<3.0.0", extras = ["dynamodb", "iam", "lambda", "s3", "sns", "sqs", "ssm"]}
@@ -1693,6 +1705,7 @@ db = ["sqlalchemy (>=1.3,<3)"]
 myslq = ["pymysql (>=1.1.0,<2.0.0)", "sqlalchemy (>=1.3,<3)"]
 postgres = ["psycopg2 (>=2.9.9,<3.0.0)", "sqlalchemy (>=1.3,<3)"]
 sftp = ["asyncssh (>=2.13.2,<3.0.0)"]
+wiremock = ["wiremock (>=2.6.1,<3.0.0)"]
 
 [[package]]
 name = "types-aiobotocore"
@@ -2470,4 +2483,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "fb9753db4bfd8d2dcfab5df363d26c8c64dee9fbe14dbb8a17956765402808da"
+content-hash = "8a16ba5e9409f97816ed8f0468e07689af584f035a25eaec3f9d45a564d3bc6d"
