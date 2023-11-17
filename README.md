@@ -91,7 +91,7 @@ pre-commit install
 - Run tests
 
 ```bash
-pytest
+poetry run test
 poetry run test-ci
 ```
 
