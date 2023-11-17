@@ -1684,13 +1684,13 @@ uvloop = ["uvloop (>=0.14.0,<1.0.0)"]
 
 [[package]]
 name = "tomodachi-testcontainers"
-version = "0.10.3"
+version = "0.10.4"
 description = "Collection of Testcontainers, pytest fixtures and test clients for end-to-end/integration testing for Python Tomodachi framework. A great starting point to learn more about Testcontainers and necessity of integration testing."
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "tomodachi_testcontainers-0.10.3-py3-none-any.whl", hash = "sha256:106a1b4ed0125c18bf51148b382b0b682866f6294867654488125da4b3ec9d63"},
-    {file = "tomodachi_testcontainers-0.10.3.tar.gz", hash = "sha256:a0246183c6d06e2a6d8c48415a9b0a64db312efdd978b165ca9edc746104d284"},
+    {file = "tomodachi_testcontainers-0.10.4-py3-none-any.whl", hash = "sha256:cf2a286f54a6964e470ddd92aa15d7325f507a82a43c2bcf20285cbf9fa83dc2"},
+    {file = "tomodachi_testcontainers-0.10.4.tar.gz", hash = "sha256:6721006a3114dff1c2f2632d32887f04f1fb916fd442e2d89e806f8178cc9c1b"},
 ]
 
 [package.dependencies]
@@ -1706,7 +1706,7 @@ types-aiobotocore = {version = ">=2.4.2,<3.0.0", extras = ["dynamodb", "iam", "l
 
 [package.extras]
 db = ["sqlalchemy (>=1.3,<3)"]
-mysql = ["pymysql (>=1.1.0,<2.0.0)", "sqlalchemy (>=1.3,<3)"]
+mysql = ["cryptography (>=41.0,<42.0)", "pymysql (>=1.1.0,<2.0.0)", "sqlalchemy (>=1.3,<3)"]
 postgres = ["psycopg2 (>=2.9.9,<3.0.0)", "sqlalchemy (>=1.3,<3)"]
 sftp = ["asyncssh (>=2.13.2,<3.0.0)"]
 wiremock = ["wiremock (>=2.6.1,<3.0.0)"]
@@ -2509,4 +2509,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "f2daa825b17aa3d86290fa3935e8c20526cb90b3d26645061943cbc7625b3cec"
+content-hash = "b9f1dc7db7233d4fc8225eb10d5e1ae6ca801e487ab7b314733b0767d4092c63"
