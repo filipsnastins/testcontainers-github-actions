@@ -10,7 +10,7 @@ python = "^3.11"
 pydantic = "^2.1.1"
 structlog = "^23.1.0"
 tomodachi = "^0.26.1"
-types-aiobotocore = { extras = ["dynamodb", "sns", "sqs"], version = "^2.5.2" }
+types-aiobotocore = { extras = ["dynamodb", "sns", "sqs"], version = "^2.8.0" }
 uvloop = "^0.17.0"
 
 [tool.poetry.group.dev.dependencies]
