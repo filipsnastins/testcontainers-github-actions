@@ -1,4 +1,4 @@
-# tomodachi-testcontainers-github-actions
+# testcontainers-github-actions
 
 An example of how to run [Testcontainers](https://testcontainers.com/) in CI pipelines.
 This example is using GitHub Actions, but the same ideas apply to other CI pipeline runners too.
@@ -6,7 +6,7 @@ This example is using GitHub Actions, but the same ideas apply to other CI pipel
 Based on [tomodachi-testcontainers](https://github.com/filipsnastins/tomodachi-testcontainers)
 and [testcontainers-python](https://github.com/testcontainers/testcontainers-python).
 
-- [tomodachi-testcontainers-github-actions](#tomodachi-testcontainers-github-actions)
+- [testcontainers-github-actions](#testcontainers-github-actions)
   - [Running Testcontainer tests in CI pipeline](#running-testcontainer-tests-in-ci-pipeline)
     - [1. Run tests directly on the CI server](#1-run-tests-directly-on-the-ci-server)
     - [2. Run tests from inside a Docker container](#2-run-tests-from-inside-a-docker-container)
