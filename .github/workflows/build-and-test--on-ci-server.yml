@@ -49,7 +49,7 @@ jobs:
       - name: Run commit hooks
         run: SKIP=test poetry run hooks
 
-      - name: Create Docker network for running Testcontianers
+      - name: Create Docker network for running Testcontainers
         run: docker network create ${{ env.TESTCONTAINER_DOCKER_NETWORK }}
 
       - name: Run tests
